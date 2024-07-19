@@ -6,7 +6,7 @@ from tensorflow.keras.layers import Input, Dense, Dropout, GlobalAveragePooling1
 
 app = Flask(__name__)
 
-bert_model = TFBertModel.from_pretrained('bert-base-uncased')
+bert_model = TFBertModel.from_pretrained('DeepPavlov/rubert-base-cased',  from_pt=True)
 
 input_ids = Input(shape=(100,), dtype=tf.int32, name='input_ids')
 attention_mask = Input(shape=(100,), dtype=tf.int32, name='attention_mask')
@@ -20,7 +20,7 @@ x = GlobalAveragePooling1D()(bert_output)
 x = Dropout(0.3)(x)
 output = Dense(1, activation='sigmoid')(x)
 model = tf.keras.models.load_model('model_reviews.keras', custom_objects={'bert_layer': bert_layer})
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+tokenizer = BertTokenizer.from_pretrained('DeepPavlov/rubert-base-cased')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -38,7 +38,7 @@ def predict():
         input_ids = tokens['input_ids']
         attention_masks = tokens['attention_mask']
         prediction = model.predict([input_ids, attention_masks])
-        prediction_label = 'good' if prediction[0][0] > 0.5 else 'bad'
+        prediction_label = 'good' if prediction[0][0] > 0.7 else 'bad'
         print(f"Input: {text}")
         print(f"Prediction: {prediction_label}")
         print(prediction[0][0])
