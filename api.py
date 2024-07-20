@@ -3,9 +3,19 @@ import tensorflow as tf
 from transformers import BertTokenizer, TFBertModel
 import numpy as np
 from tensorflow.keras.layers import Input, Dense, Dropout, GlobalAveragePooling1D, Lambda
+import os
+from sqlalchemy import create_engine, Column, Integer, String, Float
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+from db import ClassificationResult, session
+
 
 app = Flask(__name__)
 
+
+db_path = os.path.join(os.path.dirname(__file__), 'reviews.db')
+engine = create_engine(f'sqlite:///{db_path}')
+Base = declarative_base()
 bert_model = TFBertModel.from_pretrained('DeepPavlov/rubert-base-cased',  from_pt=True)
 
 input_ids = Input(shape=(100,), dtype=tf.int32, name='input_ids')
@@ -38,10 +48,11 @@ def predict():
         input_ids = tokens['input_ids']
         attention_masks = tokens['attention_mask']
         prediction = model.predict([input_ids, attention_masks])
-        prediction_label = 'good' if prediction[0][0] > 0.7 else 'bad'
-        print(f"Input: {text}")
-        print(f"Prediction: {prediction_label}")
-        print(prediction[0][0])
+        prediction_score = prediction[0][0]
+        prediction_label = 'good' if prediction_score > 0.7 else 'bad'
+        result = ClassificationResult(review_text=text, predicted_rating=prediction_score)
+        session.add(result)
+        session.commit()
         
         return jsonify({'prediction': prediction_label})
     
