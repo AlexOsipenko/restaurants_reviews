@@ -2,7 +2,7 @@ from openai import OpenAI
 
 
 client = OpenAI(
-    api_key = 'asdadaskdasdhjkashdkjdaks' #абракадабра, свой ключ, увы, предоставить не могу ¯\_(ツ)_/¯
+    api_key = 'gifdgjkhdfkgjdfjkgdfkjh' #абракадабра, свой ключ, увы, предоставить не могу ¯\_(ツ)_/¯
 )
 
 def get_openai_response(prompt):

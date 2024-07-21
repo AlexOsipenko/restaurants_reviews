@@ -24,10 +24,7 @@ def bert_layer(inputs):
     input_ids, attention_mask = inputs
     return bert_model(input_ids=input_ids, attention_mask=attention_mask)[0]
 
-bert_output = Lambda(bert_layer, output_shape=(100, 768))([input_ids, attention_mask]) 
-x = GlobalAveragePooling1D()(bert_output)
-x = Dropout(0.3)(x)
-output = Dense(1, activation='sigmoid')(x)
+
 model = tf.keras.models.load_model('model_reviews.keras', custom_objects={'bert_layer': bert_layer})
 tokenizer = BertTokenizer.from_pretrained('DeepPavlov/rubert-base-cased')
 
@@ -52,6 +49,7 @@ def predict():
         result = ClassificationResult(review_text=text, predicted_rating=prediction_score)
         session.add(result)
         session.commit()
+        session.close()
         
         return jsonify({'prediction': prediction_label})
     
