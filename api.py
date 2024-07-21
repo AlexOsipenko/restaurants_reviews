@@ -4,9 +4,8 @@ from transformers import BertTokenizer, TFBertModel
 import numpy as np
 from tensorflow.keras.layers import Input, Dense, Dropout, GlobalAveragePooling1D, Lambda
 import os
-from sqlalchemy import create_engine, Column, Integer, String, Float
+from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
 from db import ClassificationResult, session
 
 
