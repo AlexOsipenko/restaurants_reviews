@@ -19,8 +19,7 @@ Welcome to the Restaurants Reviews Analysis project! This repository contains to
 
 ## Introduction
 
-This project provides a comprehensive solution for analyzing restaurant reviews. It includes functionalities for classifying reviews as positive or negative, visualizing the most frequent words in reviews, and interacting with a conversational AI assistant to obtain and generate reviews.
-
+The Restaurants Reviews Analysis project aims to explore and demonstrate various techniques in natural language processing (NLP) and data visualization using restaurant reviews. This project includes functionalities for classifying reviews, visualizing frequent words in positive and negative reviews, and interacting with a conversational AI assistant to generate and obtain reviews.
 ## Features
 
 - **Review Classification:** Classify reviews into positive or negative categories.
