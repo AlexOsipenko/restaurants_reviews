@@ -68,7 +68,7 @@ Ensure you have the following software installed:
 Data preprocessing involves cleaning and preparing the text data for analysis. This includes removing HTML tags, punctuation, and stop words, as well as converting text to lowercase. This ensures the data is in a consistent format for further analysis.
 
 File: gpt_restaurant.ipynb
-Tools: BeautifulSoup, re, nltk
+Tools: `BeautifulSoup`, `re`, `nltk`
 ```python
 def clean_text(text):
     text = BeautifulSoup(text, "html.parser").get_text()
