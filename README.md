@@ -1,34 +1,80 @@
-# restaurants_reviews
-тестовое задание для data_scientist
+# Restaurants Reviews Analysis
 
-Тестовое задание для кандидата(LLM)
-Цель: Проверить навыки программирования на Python, работу с библиотеками для машинного обучения и обработки
-естественного языка (NLP), а также умение работать с данными и базами данных.
-Описание задачи:
-Ожидаемый результат:
-1. Предобработка данных и анализ текста
-Загрузите датасет отзывов ресторанов (датасет предоставляется в формате json).
-Проведите исследовательский анализ данных (EDA) с использованием библиотек Pandas и NumPy
-Выполните предобработку данных, например удаление дубликатов (при наличии) , очистка текста от лишних
-символов (например, HTML-теги, знаки препинания), токенизация текста итд.
-2. Модель классификации текстов
-Создайте и обучите модель нейронной сети для классификации отзывов на позитивные и негативные, возможно
-использование предобученных моделей.
-3. Интеграция и работа с API
-Разработайте REST API для классификации новых отзывов.
-Реализуйте метод для получения нового отзыва, обработки его и возвращения результата классификации.
-4. Работа с базами данных
-Сохраните результаты классификации в базу данных (используйте базу данных по вашему выбору).
-Реализуйте методы для извлечения данных из базы и анализа сохраненных результатов.
-5. Работа с OpenAI API
-Предложите диалоговую схему для нейрособеседника
-6. Дополнительные задачи (опционально)
-Разработайте простую модель для генерации текста, используя библиотеки NLP (например из библиотеки Hugging
-Face Transformers).
-Реализуйте инструмент для визуализации наиболее частых слов в позитивных и негативных отзывах.
-Исходный код проекта, загруженный на GitHub или предоставленный в виде архива.
-Документация по проекту, включающая описание шагов выполнения, использованные методы и полученные результаты.
-Демонстрация работы REST API
+Welcome to the Restaurants Reviews Analysis project! This repository contains tools and scripts for analyzing restaurant reviews, including classification of reviews and visualization of frequent words in positive and negative reviews.
 
+## Table of Contents
 
-ПРИМЕЧАНИЕ: Рекомендовано прочитать документ Обязательно_к_прочтению.docx. Комментарии к коду присутствуют в gpt_restaurants.ipynb
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+  - [Data Preprocessing](#data-preprocessing)
+  - [Classification](#classification)
+  - [Visualization](#visualization)
+- [Project Structure](#project-structure)
+- [API](#api)
+- [License](#license)
+
+## Introduction
+
+The Restaurants Reviews Analysis project aims to explore and demonstrate various techniques in natural language processing (NLP) and data visualization using restaurant reviews. This project includes functionalities for classifying reviews, visualizing frequent words in positive and negative reviews, and interacting with a conversational AI assistant to generate and obtain reviews.
+## Features
+
+- **Review Classification:** Classify reviews into positive or negative categories.
+- **Word Frequency Visualization:** Visualize the most frequent words in positive and negative reviews.
+- **Conversational AI:** Interact with an AI assistant to generate and retrieve reviews.
+- **Data Preprocessing:** Clean and preprocess review text data.
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have the following software installed:
+- Python 3.10 or higher
+- `pandas`
+- `nltk`
+- `sqlalchemy`
+- `tensorflow`
+- `transformers`
+- `bs4`
+- `openai`
+- `sklearn`
+- `wordcloud`
+- `matplotlib`
+- `numpy`
+### Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/AlexOsipenko/restaurants_reviews.git
+    cd restaurants_reviews
+    ```
+
+2. Install the required Python packages:
+    ```bash
+    pip install pandas nltk sqlalchemy tensorflow transformers beautifulsoup4 openai scikit-learn wordcloud matplotlib numpy
+    ```
+
+3. Set up OpenAI API:
+    - Create a file named `.env` in the project root directory.
+    - Add your OpenAI API key to the `.env` file:
+        ```plaintext
+        OPENAI_API_KEY=your_openai_api_key
+        ```
+## Usage
+### Data Preprocessing
+Data preprocessing involves cleaning and preparing the text data for analysis. This includes removing HTML tags, punctuation, and stop words, as well as converting text to lowercase. This ensures the data is in a consistent format for further analysis.
+
+File: gpt_restaurant.ipynb
+Tools: `BeautifulSoup`, `re`, `nltk`
+```python
+def clean_text(text):
+    text = BeautifulSoup(text, "html.parser").get_text()
+    text = re.sub(r'[^\w\s]', '', text)
+    text = text.lower()
+    return text
+
+df_restaurants['text'] = df_restaurants['text'].apply(clean_text)
+
