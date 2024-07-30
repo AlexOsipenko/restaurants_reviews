@@ -10,7 +10,7 @@ Welcome to the Restaurants Reviews Analysis project! This repository contains to
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-  - [Data Preprocessing](#data-preprocessing)
+  - [Converting TSKV to DataFrame](#converting)
   - [Classification](#classification)
   - [Visualization](#visualization)
 - [Project Structure](#project-structure)
@@ -77,4 +77,28 @@ def clean_text(text):
     return text
 
 df_restaurants['text'] = df_restaurants['text'].apply(clean_text)
+```
+##Converting TSKV to DataFrame
 
+TSKV (Tab-Separated Key-Value) is a structured data format. This project includes functionality to convert TSKV formatted data directly into a pandas DataFrame, which is easier to manipulate and analyze in Python.
+
+File: gpt_restaurant.ipynb
+Tools: pandas
+```python
+def tsv2json(input_file, output_file):
+    arr = []
+    with open(input_file, 'r', encoding='utf-8') as file:
+        for line in file:
+            items = line.split('\t')
+            d = {}
+            for item in items:
+                key, value = item.split('=', 1)
+                d[key.strip()] = value.strip()
+            arr.append(d)
+    with open(output_file, 'w', encoding='utf-8') as file:
+        json.dump(arr, file, ensure_ascii=False, indent=4)
+
+tsv2json(filename_tskv, filename_json)
+df = pd.read_json(filename_json, encoding='utf-8')
+df_restaurants = df[df['rubrics'].str.contains('Ресторан', case=False)]
+```
