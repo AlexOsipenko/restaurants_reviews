@@ -78,7 +78,7 @@ def clean_text(text):
 
 df_restaurants['text'] = df_restaurants['text'].apply(clean_text)
 ```
-##Converting TSKV to DataFrame
+### Converting TSKV to DataFrame
 
 TSKV (Tab-Separated Key-Value) is a structured data format. This project includes functionality to convert TSKV formatted data directly into a pandas DataFrame, which is easier to manipulate and analyze in Python.
 
