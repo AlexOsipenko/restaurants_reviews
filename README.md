@@ -102,3 +102,19 @@ tsv2json(filename_tskv, filename_json)
 df = pd.read_json(filename_json, encoding='utf-8')
 df_restaurants = df[df['rubrics'].str.contains('Ресторан', case=False)]
 ```
+### Classification
+The classification functionality uses the OpenAI API to classify restaurant reviews as positive or negative. This demonstrates how NLP and machine learning can be applied to sentiment analysis in text data.
+
+File: gpt_restaurant.ipynb
+Tools: openai, transformers, tensorflow
+```python
+from transformers import BertTokenizer
+import tensorflow as tf
+
+texts = df_restaurants['text'].tolist()
+labels = df_restaurants['label'].tolist()
+tokenizer = BertTokenizer.from_pretrained('DeepPavlov/rubert-base-cased')
+tokens = tokenizer(texts, padding=True, truncation=True, max_length=100, return_tensors="tf")
+input_ids = tokens['input_ids']
+attention_masks = tokens['attention_mask']
+```
