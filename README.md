@@ -10,7 +10,7 @@ Welcome to the Restaurants Reviews Analysis project! This repository contains to
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-  - [Converting TSKV to DataFrame](#converting)
+  - [Converting TSKV to DataFrame](#converting-tskv-to-dataframe)
   - [Classification](#classification)
   - [Visualization](#visualization)
 - [Project Structure](#project-structure)
