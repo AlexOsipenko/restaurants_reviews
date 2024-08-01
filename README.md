@@ -150,6 +150,7 @@ plt.show()
 ```
 Example Visualization
 Here's an example of a word cloud for positive reviews:
+![image](https://github.com/user-attachments/assets/45544946-c26e-41f2-9c2d-0dd368fac9b7)
 
 
 And an example for negative reviews:
