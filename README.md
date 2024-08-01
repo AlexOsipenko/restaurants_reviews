@@ -118,3 +118,38 @@ tokens = tokenizer(texts, padding=True, truncation=True, max_length=100, return_
 input_ids = tokens['input_ids']
 attention_masks = tokens['attention_mask']
 ```
+### Visualization
+Visualization helps identify trends and common themes in data. This project includes functionality to generate word clouds for positive and negative reviews, allowing users to see the most frequent words and phrases in the reviews. This can provide insights into what customers like or dislike about a restaurant.
+
+File: gpt_restaurant.ipynb
+Tools: wordcloud, matplotlib
+```python
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
+positive_reviews = df_restaurants[df_restaurants['label'] == 1]['text']
+negative_reviews = df_restaurants[df_restaurants['label'] == 0]['text']
+positive_reviews_string = ' '.join(positive_reviews)
+negative_reviews_string = ' '.join(negative_reviews)
+
+positive_cloud = WordCloud(width=800, height=400, background_color='white').generate(positive_reviews_string)
+negative_cloud = WordCloud(width=800, height=400, background_color='white').generate(negative_reviews_string)
+
+plt.figure(figsize=(12, 6))
+plt.subplot(1, 2, 1)
+plt.imshow(positive_cloud, interpolation='bilinear')
+plt.axis('off')
+plt.title('Positive Reviews')
+
+plt.subplot(1, 2, 2)
+plt.imshow(negative_cloud, interpolation='bilinear')
+plt.axis('off')
+plt.title('Negative Reviews')
+
+plt.show()
+```
+Example Visualization
+Here's an example of a word cloud for positive reviews:
+
+
+And an example for negative reviews:
