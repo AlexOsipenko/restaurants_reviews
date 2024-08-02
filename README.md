@@ -156,4 +156,4 @@ Here's an example of a word cloud for positive reviews:
 
 And an example for negative reviews:
 
-### Project Structure
+## Project Structure
