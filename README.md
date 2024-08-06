@@ -153,9 +153,9 @@ Here's an example of a word cloud for positive reviews:
 <p align="center">
 ![image](https://github.com/user-attachments/assets/45544946-c26e-41f2-9c2d-0dd368fac9b7)
 </p>
-
+<p align="center">
 And an example for negative reviews:
 ![image](https://github.com/user-attachments/assets/506656e9-3420-42ec-ac03-8ed32f32ad4d)
-
+</p>
 
 ## Project Structure
