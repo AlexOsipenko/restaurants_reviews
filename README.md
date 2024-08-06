@@ -155,7 +155,7 @@ Here's an example of a word cloud for positive reviews:
 </p>
 <p align="center">
 And an example for negative reviews:
-  <img src=(https://github.com/user-attachments/assets/506656e9-3420-42ec-ac03-8ed32f32ad4d alt="Positive Reviews Word Cloud">
+  <img src=https://github.com/user-attachments/assets/23e03b29-0bf5-4555-8ba2-dbd80f94edb1 alt="Negative Reviews Word Cloud">
 </p>
 
 ## Project Structure
