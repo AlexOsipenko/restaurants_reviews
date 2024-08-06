@@ -1,6 +1,7 @@
 <p align="center">
    <img src=https://github.com/user-attachments/assets/4078b96c-760f-4868-80dc-832757dd7368 alt="logo">
 </p>
+
 # Restaurants Reviews Analysis
 
 Welcome to the Restaurants Reviews Analysis project! This repository contains tools and scripts for analyzing restaurant reviews, including classification of reviews and visualization of frequent words in positive and negative reviews.
