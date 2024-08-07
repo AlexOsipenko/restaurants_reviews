@@ -13,7 +13,7 @@ Welcome to the Restaurants Reviews Analysis project! This repository contains to
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
+- [Preparation](#preparation)
   - [Converting TSKV to DataFrame](#converting-tskv-to-dataframe)
   - [Classification](#classification)
   - [Visualization](#visualization)
@@ -24,6 +24,7 @@ Welcome to the Restaurants Reviews Analysis project! This repository contains to
 ## Introduction
 
 The Restaurants Reviews Analysis project aims to explore and demonstrate various techniques in natural language processing (NLP) and data visualization using restaurant reviews. This project includes functionalities for classifying reviews, visualizing frequent words in positive and negative reviews.
+
 ## Features
 
 - **Review Classification:** Classify reviews into positive or negative categories.
@@ -53,7 +54,7 @@ Ensure you have the following software installed:
     ```
 
 
-## Usage
+## Preparation
 ### Data Preprocessing
 Data preprocessing involves cleaning and preparing the text data for analysis. This includes removing HTML tags, punctuation, and stop words, as well as converting text to lowercase. This ensures the data is in a consistent format for further analysis.
 
@@ -147,5 +148,95 @@ And an example for negative reviews:
 <p align="center">
   <img src=https://github.com/user-attachments/assets/23e03b29-0bf5-4555-8ba2-dbd80f94edb1 alt="Negative Reviews Word Cloud">
 </p>
+
+## Model Description
+File: gpt_restaurant.ipynb
+Tools: `tensorflow`, `TFBertModel`, `nltk`
+The model used for classifying restaurant reviews is based on the BERT architecture, specifically leveraging the 'DeepPavlov/rubert-base-cased' pre-trained model. This section provides a detailed description of the model architecture and the reasoning behind the choice of layers.
+
+Load Pre-trained BERT Model:
+
+```python
+bert_model = TFBertModel.from_pretrained('DeepPavlov/rubert-base-cased', from_pt=True)
+```
+
+BERT (Bidirectional Encoder Representations from Transformers) is one of the most powerful models for natural language understanding tasks. We chose the 'DeepPavlov/rubert-base-cased' model because it is fine-tuned on the Russian language, making it highly suitable for processing and understanding Russian restaurant reviews.
+
+Define Input Layers:
+
+```python
+input_ids = Input(shape=(100,), dtype=tf.int32, name='input_ids')
+attention_mask = Input(shape=(100,), dtype=tf.int32, name='attention_mask')
+```
+
+The input_ids and attention_mask are essential components for feeding data into the BERT model. The input_ids represent the tokenized review text, while the attention_mask indicates which tokens should be attended to by the model (useful for handling padded sequences).
+
+BERT Layer:
+
+```python
+def bert_layer(inputs):
+    input_ids, attention_mask = inputs
+    return bert_model(input_ids=input_ids, attention_mask=attention_mask)[0]
+
+bert_output = Lambda(bert_layer, output_shape=(100, 768))([input_ids, attention_mask])
+```
+I wrap the BERT model in a Lambda layer to integrate it into our custom architecture. The BERT model processes the input tokens and produces contextual embeddings for each token. These embeddings capture rich semantic information about the text.
+
+Pooling and Dropout Layers:
+
+```python
+x = GlobalAveragePooling1D()(bert_output)
+x = Dropout(0.3)(x)
+```
+
+GlobalAveragePooling1D: This layer aggregates the token embeddings by averaging them across the sequence length. This results in a fixed-size output regardless of the input sequence length, which simplifies further processing and helps capture the overall meaning of the review.
+Dropout: We apply a dropout rate of 30% to prevent overfitting. Dropout randomly deactivates neurons during training, which encourages the model to learn robust features rather than relying on specific neurons.
+Output Layer:
+
+```python
+output = Dense(1, activation='sigmoid')(x)
+Reasoning:
+The final dense layer has a single neuron with a sigmoid activation function. This setup is ideal for binary classification tasks, as it outputs a probability between 0 and 1, indicating the likelihood of a review being positive.
+```
+
+Compile and Train the Model:
+
+```python
+model = Model(inputs=[input_ids, attention_mask], outputs=output)
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+early_stopping = EarlyStopping(monitor='val_loss', patience=3, restore_best_weights=True)
+model_checkpoint = ModelCheckpoint(
+    filepath='model_reviews.keras',
+    save_best_only=True,
+    monitor='val_loss',
+    mode='min',
+    save_weights_only=False,
+    verbose=1
+)
+
+history = model.fit(
+    [train_inputs, train_masks],
+    train_labels,
+    validation_data=([test_inputs, test_masks], test_labels),
+    epochs=50,
+    batch_size=16,
+    callbacks=[early_stopping, model_checkpoint],
+)
+```
+Adam Optimizer: Chosen for its adaptive learning rate capabilities, making it well-suited for complex models like BERT.
+Binary Crossentropy Loss: Suitable for binary classification tasks, penalizing incorrect predictions more severely.
+EarlyStopping and ModelCheckpoint: These callbacks help to avoid overfitting and ensure the best model is saved during training.
+Evaluate the Model:
+
+```python
+model = tf.keras.models.load_model('model_reviews.keras', custom_objects={'bert_layer': bert_layer})
+loss, accuracy = model.evaluate([test_inputs, test_masks], test_labels)
+print(f'Loss: {loss}')
+print(f'Accuracy: {accuracy}')
+```
+After training, I load the best model saved during training and evaluate its performance on the test set to ensure it generalizes well to unseen data. The evaluation metrics include loss and accuracy, which provide insights into the model's performance.
+
+By combining BERT's powerful contextual embeddings with additional layers for pooling and dropout, I create a robust model capable of accurately classifying restaurant reviews. This architecture leverages state-of-the-art natural language processing techniques to provide reliable results for sentiment analysis.
 
 ## Project Structure
