@@ -23,7 +23,7 @@ Welcome to the Restaurants Reviews Analysis project! This repository contains to
 
 ## Introduction
 
-The Restaurants Reviews Analysis project aims to explore and demonstrate various techniques in natural language processing (NLP) and data visualization using restaurant reviews. This project includes functionalities for classifying reviews, visualizing frequent words in positive and negative reviews, and interacting with a conversational AI assistant to generate and obtain reviews.
+The Restaurants Reviews Analysis project aims to explore and demonstrate various techniques in natural language processing (NLP) and data visualization using restaurant reviews. This project includes functionalities for classifying reviews, visualizing frequent words in positive and negative reviews.
 ## Features
 
 - **Review Classification:** Classify reviews into positive or negative categories.
@@ -37,17 +37,8 @@ The Restaurants Reviews Analysis project aims to explore and demonstrate various
 
 Ensure you have the following software installed:
 - Python 3.10 or higher
-- `pandas`
-- `nltk`
-- `sqlalchemy`
-- `tensorflow`
-- `transformers`
-- `bs4`
-- `openai`
-- `sklearn`
-- `wordcloud`
-- `matplotlib`
-- `numpy`
+- `pandas` `nltk` `nltk` `sqlalchemy` `tensorflow` `transformers` `bs4` `sklearn` `wordcloud` `matplotlib` `numpy`
+
 ### Installation
 
 1. Clone the repository:
@@ -61,12 +52,7 @@ Ensure you have the following software installed:
     pip install pandas nltk sqlalchemy tensorflow transformers beautifulsoup4 openai scikit-learn wordcloud matplotlib numpy
     ```
 
-3. Set up OpenAI API:
-    - Create a file named `.env` in the project root directory.
-    - Add your OpenAI API key to the `.env` file:
-        ```plaintext
-        OPENAI_API_KEY=your_openai_api_key
-        ```
+
 ## Usage
 ### Data Preprocessing
 Data preprocessing involves cleaning and preparing the text data for analysis. This includes removing HTML tags, punctuation, and stop words, as well as converting text to lowercase. This ensures the data is in a consistent format for further analysis.
