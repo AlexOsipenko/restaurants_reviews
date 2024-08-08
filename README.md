@@ -10,6 +10,7 @@ Welcome to the Restaurants Reviews Analysis project! This repository contains to
 
 - [Introduction](#introduction)
 - [Features](#features)
+- [Dataset](#dataset)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -31,6 +32,12 @@ The Restaurants Reviews Analysis project aims to explore and demonstrate various
 - **Word Frequency Visualization:** Visualize the most frequent words in positive and negative reviews.
 - **Conversational AI:** Interact with an AI assistant to generate and retrieve reviews.
 - **Data Preprocessing:** Clean and preprocess review text data.
+
+## Dataset
+
+The dataset used in this project is provided by Yandex and is available as an open-source dataset. It has been released by Yandex as part of their commitment to supporting research and development in the fields of natural language processing and sentiment analysis. The dataset can be freely accessed and used for various analytical purposes, including the development of machine learning models like the one demonstrated in this project.
+
+By utilizing a dataset from a reputable source like Yandex, I ensure the quality and relevance of the data used in this analysis. The dataset's open-source nature also promotes transparency and allows others to replicate and build upon the work done in this project.
 
 ## Getting Started
 
