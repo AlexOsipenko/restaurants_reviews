@@ -46,8 +46,8 @@ The Restaurants Reviews Analysis project aims to explore and demonstrate various
 
 ## Dataset
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b36bce18-f5cc-4162-b093-be041be08bf0" alt="yandex">
-  <img src="https://github.com/user-attachments/assets/7f3da105-5885-4854-a14e-5e97991bc53e" style="margin-right:10px"; alt="yandex_review_example">
+  <img src="https://github.com/user-attachments/assets/b36bce18-f5cc-4162-b093-be041be08bf0" alt="yandex" height="300">
+  <img src="https://github.com/user-attachments/assets/7f3da105-5885-4854-a14e-5e97991bc53e" style="margin-right:10px"; alt="yandex_review_example" height="300'>
 </p>
 
 The dataset used in this project is provided by Yandex and is available as an open-source dataset. It has been released by Yandex as part of their commitment to supporting research and development in the fields of natural language processing and sentiment analysis. The dataset can be freely accessed and used for various analytical purposes, including the development of machine learning models like the one demonstrated in this project.
