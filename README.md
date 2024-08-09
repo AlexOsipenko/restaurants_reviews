@@ -6,7 +6,7 @@
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/telegram.svg" alt="Telegram" height="30" style="margin-right:10px;">
   </a>
   <a href="https://hh.ru/resume/yourprofile">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/headhunter.svg" alt="HeadHunter" height="30" style="margin-right:10px;">
+    <img src="[https://github.com/user-attachments/assets/ff4bf323-8862-463f-affb-25fa9bf3892a](https://mytischi.hh.ru/resume/523f5dadff0d5e0a600039ed1f394e77735067?disableBrowserCache=true&hhtmFrom=resume_list" alt="HeadHunter" height="30" style="margin-right:10px;">
   </a>
 </p>
 <p align="center">
