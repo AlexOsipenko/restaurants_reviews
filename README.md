@@ -47,7 +47,7 @@ The Restaurants Reviews Analysis project aims to explore and demonstrate various
 ## Dataset
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b36bce18-f5cc-4162-b093-be041be08bf0" alt="yandex">
+  <img src="https://github.com/user-attachments/assets/b36bce18-f5cc-4162-b093-be041be08bf0" alt="yandex" height = "30%">
   <img src="https://github.com/user-attachments/assets/c2a5bd18-2978-4df7-b5d8-e02480ac8b56" alt="yandex_review_example" >
 </p>
 
