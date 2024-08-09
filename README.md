@@ -8,10 +8,6 @@
   <a href="https://hh.ru/resume/523f5dadff0d5e0a600039ed1f394e77735067?disableBrowserCache=true&hhtmFrom=resume_list">
     <img src="https://github.com/user-attachments/assets/977396c6-da94-492c-b117-a747a30f34c7" alt="HeadHunter" height="100" style="margin-right:0px;">
   </a>
-  <br />
-  <svg height="2" width="200">
-    <line x1="0" y1="0" x2="200" y2="0" style="stroke:red;stroke-width:2" />
-  </svg>
 </p>
 <p align="center">
    <img src=https://github.com/user-attachments/assets/4078b96c-760f-4868-80dc-832757dd7368 alt="logo">
