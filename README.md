@@ -1,4 +1,4 @@
-<p align="center">
+<p align="center" style="border-bottom: 2px solid red; padding-bottom: 10px;">
   <a href="https://github.com/AlexOsipenko">
     <img src="https://github.com/user-attachments/assets/8d760838-6147-416c-b4d0-e67009ae53bd" alt="GitHub" height="110" style="margin-right:10px;">
   </a>
