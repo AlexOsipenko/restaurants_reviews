@@ -5,8 +5,8 @@
   <a href="https://t.me/yourusername">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/telegram.svg" alt="Telegram" height="30" style="margin-right:10px;">
   </a>
-  <a href="https://hh.ru/resume/yourprofile">
-    <img src="https://github.com/user-attachments/assets/c94cf6f2-7dca-4f20-be56-a7da2b3fddb5" alt="HeadHunter" style="margin-right:10px;">
+  <a href="https://hh.ru/resume/523f5dadff0d5e0a600039ed1f394e77735067?disableBrowserCache=true&hhtmFrom=resume_list">
+    <img src="https://github.com/user-attachments/assets/977396c6-da94-492c-b117-a747a30f34c7" alt="HeadHunter" style="margin-right:10px;">
   </a>
 </p>
 <p align="center">
