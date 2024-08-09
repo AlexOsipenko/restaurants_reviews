@@ -1,7 +1,13 @@
 <p align="center">
-   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]([https://github.com/yourusername](https://github.com/AlexOsipenko))
-   [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/yourusername)
-   [![HeadHunter](https://img.shields.io/badge/HeadHunter-FF0000?style=for-the-badge&logo=hh&logoColor=white)](https://hh.ru/resume/yourprofile)
+  <a href="https://github.com/yourusername">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub" height="30" style="margin-right:10px;">
+  </a>
+  <a href="https://t.me/yourusername">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/telegram.svg" alt="Telegram" height="30" style="margin-right:10px;">
+  </a>
+  <a href="https://hh.ru/resume/yourprofile">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/headhunter.svg" alt="HeadHunter" height="30" style="margin-right:10px;">
+  </a>
 </p>
 <p align="center">
    <img src=https://github.com/user-attachments/assets/4078b96c-760f-4868-80dc-832757dd7368 alt="logo">
