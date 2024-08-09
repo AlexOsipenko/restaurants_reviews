@@ -1,12 +1,12 @@
 <p align="center">
   <a href="https://github.com/AlexOsipenko">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub" height="30" style="margin-right:10px;">
+    <img src="https://github.com/user-attachments/assets/dfbe73d3-ba5a-4a02-ab8a-ad59a74e4d2f" alt="GitHub" height="100" style="margin-right:10px;">
   </a>
   <a href="https://t.me/yourusername">
-    <img src="https://github.com/user-attachments/assets/e8a2ba1f-2e15-4200-ac70-a2c9161865fe" alt="Telegram" height="200" style="margin-right:10px;">
+    <img src="https://github.com/user-attachments/assets/e8a2ba1f-2e15-4200-ac70-a2c9161865fe" alt="Telegram" height="100" style="margin-right:10px;">
   </a>
   <a href="https://hh.ru/resume/523f5dadff0d5e0a600039ed1f394e77735067?disableBrowserCache=true&hhtmFrom=resume_list">
-    <img src="https://github.com/user-attachments/assets/977396c6-da94-492c-b117-a747a30f34c7" alt="HeadHunter" height="200" style="margin-right:10px;">
+    <img src="https://github.com/user-attachments/assets/977396c6-da94-492c-b117-a747a30f34c7" alt="HeadHunter" height="100" style="margin-right:10px;">
   </a>
 </p>
 <p align="center">
