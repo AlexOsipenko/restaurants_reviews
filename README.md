@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/yourusername">
+  <a href="https://github.com/AlexOsipenko">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub" height="30" style="margin-right:10px;">
   </a>
   <a href="https://t.me/yourusername">
