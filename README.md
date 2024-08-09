@@ -49,6 +49,18 @@ The Restaurants Reviews Analysis project aims to explore and demonstrate various
 The dataset used in this project is provided by Yandex and is available as an open-source dataset. It has been released by Yandex as part of their commitment to supporting research and development in the fields of natural language processing and sentiment analysis. The dataset can be freely accessed and used for various analytical purposes, including the development of machine learning models like the one demonstrated in this project.
 
 By utilizing a dataset from a reputable source like Yandex, I ensure the quality and relevance of the data used in this analysis. The dataset's open-source nature also promotes transparency and allows others to replicate and build upon the work done in this project.
+Key Features of the Dataset:
+Size and Scope: The dataset includes 500,000 reviews, offering a broad and diverse range of opinions across different types of establishments. This large volume of data ensures that the model can be trained on a wide variety of linguistic expressions and sentiments, enhancing its generalization capabilities.
+
+Timeframe: The reviews were collected over a six-month period (January to June 2023), capturing recent and relevant user opinions that reflect current trends and sentiments in the restaurant and service industry.
+
+Content:
+
+Address and Name: Each entry contains the address and the name of the establishment being reviewed, allowing for location-specific analysis.
+Categories: The dataset includes a list of categories (or rubrics) associated with each establishment, such as "cafe" or "restaurant," enabling the filtering and analysis of reviews based on the type of service provided.
+User Rating: Each review is accompanied by a user-provided rating, which ranges from 1 to 5. This rating is crucial for the sentiment classification task, as it provides a direct numerical representation of the user's sentiment.
+Review Text: The main component of the dataset is the review text, where users express their opinions about the establishment. This text serves as the input for the sentiment analysis model.
+Data Cleaning: The dataset has been meticulously cleaned to remove any personal data that users may have inadvertently included in their reviews. This ensures that the dataset is both privacy-compliant and focused solely on the content relevant to sentiment analysis.
 
 ## Getting Started
 
