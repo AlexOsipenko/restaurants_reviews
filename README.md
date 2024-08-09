@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/AlexOsipenko">
-    <img src="https://github.com/user-attachments/assets/dfbe73d3-ba5a-4a02-ab8a-ad59a74e4d2f" alt="GitHub" height="120" style="margin-right:10px;">
+    <img src="https://github.com/user-attachments/assets/dfbe73d3-ba5a-4a02-ab8a-ad59a74e4d2f" alt="GitHub" height="100" style="margin-right:10px;">
   </a>
   <a href="https://t.me/yourusername">
     <img src="https://github.com/user-attachments/assets/e8a2ba1f-2e15-4200-ac70-a2c9161865fe" alt="Telegram" height="100" style="margin-right:10px;">
