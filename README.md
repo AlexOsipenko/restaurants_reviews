@@ -6,8 +6,7 @@
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/telegram.svg" alt="Telegram" height="30" style="margin-right:10px;">
   </a>
   <a href="https://hh.ru/resume/yourprofile">
-    <img src="![00181](https://github.com/user-attachments/assets/c94cf6f2-7dca-4f20-be56-a7da2b3fddb5)
-" alt="HeadHunter" height="30" style="margin-right:10px;">
+    <img src="https://github.com/user-attachments/assets/c94cf6f2-7dca-4f20-be56-a7da2b3fddb5" alt="HeadHunter" style="margin-right:10px;">
   </a>
 </p>
 <p align="center">
